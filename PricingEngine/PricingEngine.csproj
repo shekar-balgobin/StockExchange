@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>Tyl.StockExchange.$(MSBuildProjectName)</AssemblyName>
+    <RootNamespace>Tyl.StockExchange.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CommandQuery\CommandQuery.csproj" />
+    <ProjectReference Include="..\PricingEngine.Model.MsSqlServer\PricingEngine.Model.MsSqlServer.csproj" />
+    <ProjectReference Include="..\PricingEngine.Model\PricingEngine.Model.csproj" />
+  </ItemGroup>
+
+</Project>

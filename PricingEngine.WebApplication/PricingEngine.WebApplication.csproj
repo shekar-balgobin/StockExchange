@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>Tyl.StockExchange.$(MSBuildProjectName)</AssemblyName>
+    <RootNamespace>Tyl.StockExchange.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.10" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CommandQuery\CommandQuery.csproj" />
+    <ProjectReference Include="..\PricingEngine.Model\PricingEngine.Model.csproj" />
+    <ProjectReference Include="..\PricingEngine\PricingEngine.csproj" />
+  </ItemGroup>
+
+</Project>
